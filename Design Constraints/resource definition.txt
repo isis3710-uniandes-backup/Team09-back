@@ -7,12 +7,12 @@ Canvas: Represents a drawing. A canvas is composed of a set of actions over time
 
 Action: Represents a change in a drawing a user made. An action is stored as an SVG file.
 
-Room: Represents an open room where users or groups are editing a canvas.
+Room: Represents an open room where users or groups are editing a canvas. Rooms are temporal and are deleted once they are closed.
 
 Sessions: Represents a session of any user. Admins can view all changes a user did in a session.
 
 Comments: Represents a comment on a canvas a user did.
 
-Chat: Represents a chatbox in a specific room. 
+Chat: Represents a chatbox in a specific canvas. 
 
-Messages: Represents a message in a chatroom.
+Messages: Represents a message in a chatbox.

@@ -1,1 +1,32 @@
-TODO
+url: /user/<username> || <userid>
+returns user information for the given username. id, username, email, password, and groups (id and name).
+
+url: /users
+returns a list with all users and all their info (see above).
+
+url: /group/<groupname> || <groupid>
+returns all group information for the given id. id, group.name, adminIds, users.
+
+url: /sessions/<username>
+returns all sessions from a particular user. ids, startTime, endTime and actionsMade.
+
+url: /actions/<username>
+returns all actions a specific user has made. id, svg, and time.
+
+url: /canvas/<id>
+returns information about the canvas with the id. id, String actionsInDrawing, and the activeRoom if it exists. Does not return chat or comments as these are optional.
+
+url: /canvas/<groupid>
+returns canvas information for all canvases of a specific group. ids and names.
+
+url: /room/<roomid>
+returns all information pertinent to a room. Id, activeUsers, and information about the canvas it is editing (canvasid, canvasname, actionsInDrawing, chat and comments.)
+
+url: /chat/<chatid> 
+returns all chat messages for a particular chatid.
+
+url: /message/<username>
+returns all messages for a particular username.
+
+url: /comment/<canvasid>
+returns all comments over a specific canvas' comments. ids, comm, and user.
