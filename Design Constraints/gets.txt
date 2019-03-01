@@ -1,7 +1,7 @@
 url: /users/<username> || <userid>
 returns user information for the given username. id, username, email, password, and groups (id and name).
 
-url: /users
+url: /users/
 returns a list with all users and all their info (see above).
 
 url: /group/<groupname> || <groupid>

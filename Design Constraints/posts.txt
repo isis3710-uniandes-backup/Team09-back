@@ -13,9 +13,10 @@ receives the following and creates a group in the server with random id. Adds th
 	userid: <userid>
 }
 
-url: /groups/<groupId>/admins/
+url: /groups/<groupId>/admins/<id>
 receives an id of a user and adds it to the admins. 
 {
+	groupId: <groupId>
 	userId: <userId>
 }
 
