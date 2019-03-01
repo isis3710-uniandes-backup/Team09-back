@@ -1,0 +1,22 @@
+{
+  "name": "team09-back",
+  "version": "1.0.0",
+  "description": "Iteration 1 Logic Drawing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isis3710-uniandes/Team09-back.git"
+  },
+  "author": "James Lake / Jose Daniel Cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isis3710-uniandes/Team09-back/issues"
+  },
+  "homepage": "https://github.com/isis3710-uniandes/Team09-back#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
