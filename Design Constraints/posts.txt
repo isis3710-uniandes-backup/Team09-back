@@ -13,6 +13,20 @@ receives the following and creates a group in the server with random id. Adds th
 	userid: <userid>
 }
 
+url: /group/<groupId>/admins/<id>
+receives an id of a user and adds it to the admins. 
+{
+	groupId: <groupId>
+	userId: <userId>
+}
+
+url: /group/<groupId>/users/<id>
+receives an id of a user and adds it to the userlist of the group. 
+{
+	groupId: <groupId>
+	userId: <userId>
+}
+
 url: /session/create
 This post is done automatically by the server once the user logs in and sends it as date. A put is performed to close session. Receives:
 {

@@ -13,6 +13,9 @@ returns all sessions from a particular user. ids, startTime, endTime and actions
 url: /actions/<username>
 returns all actions a specific user has made. id, svg, and time.
 
+url: /action/<svgPath>
+returns the action, sessionid and user that performed a certain svg file.
+
 url: /canvas/<id>
 returns information about the canvas with the id. id, String actionsInDrawing, and the room it belongs to. Does not return chat or comments as these are optional.
 
@@ -24,6 +27,9 @@ returns all information pertinent to a room. Id, name, chatId, and information a
 
 url: /chat/<chatid> 
 returns all chat messages for a particular chatid.
+
+url: /chats
+returns all chats and the room they belong to.
 
 url: /message/<username>
 returns all messages for a particular username.

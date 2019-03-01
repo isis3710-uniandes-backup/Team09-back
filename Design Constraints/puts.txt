@@ -1,1 +1,37 @@
-TODO
+url: /user/edit/<username>
+modifies the password and/or email for a user. Can receive one or both:
+{
+	password: <password>,
+	email: <email>
+}
+
+url: /session/<userId>
+ends the session of the user, adding the endTime to the register.
+{
+	endTime: <endTime>
+}
+
+url: /canvas/edit/<canvasId>
+modifies information about the canvas. can receive one or both:
+{
+	name: <canvasName>,
+	description: <description>
+}
+
+url: /comment/edit/<commentId>
+edit a comment.
+{
+	comm: <comment>
+}
+
+url: /room/edit/<roomId>
+edit a room.
+{
+	name: <roomName>
+}
+
+url: /message/edit/<messageId>
+edits a message.
+{
+	msg: <message>
+}
