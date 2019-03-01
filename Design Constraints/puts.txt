@@ -1,11 +1,11 @@
-url: /user/edit/<username>
+url: /users/edit/<username>
 modifies the password and/or email for a user. Can receive one or both:
 {
 	password: <password>,
 	email: <email>
 }
 
-url: /session/<userId>
+url: /sessions/<userId>
 ends the session of the user, adding the endTime to the register.
 {
 	endTime: <endTime>
@@ -18,19 +18,19 @@ modifies information about the canvas. can receive one or both:
 	description: <description>
 }
 
-url: /comment/edit/<commentId>
+url: /comments/edit/<commentId>
 edit a comment.
 {
 	comm: <comment>
 }
 
-url: /room/edit/<roomId>
+url: /rooms/edit/<roomId>
 edit a room.
 {
 	name: <roomName>
 }
 
-url: /message/edit/<messageId>
+url: /messages/edit/<messageId>
 edits a message.
 {
 	msg: <message>

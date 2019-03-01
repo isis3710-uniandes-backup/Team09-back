@@ -1,4 +1,4 @@
-url: /user/<username> || <userid>
+url: /users/<username> || <userid>
 returns user information for the given username. id, username, email, password, and groups (id and name).
 
 url: /users
@@ -13,7 +13,7 @@ returns all sessions from a particular user. ids, startTime, endTime and actions
 url: /actions/<username>
 returns all actions a specific user has made. id, svg, and time.
 
-url: /action/<svgPath>
+url: /actions/<svgPath>
 returns the action, sessionid and user that performed a certain svg file.
 
 url: /canvas/<id>
@@ -22,17 +22,17 @@ returns information about the canvas with the id. id, String actionsInDrawing, a
 url: /canvas/<roomid>
 returns canvas information for all canvases of a specific room. ids and names.
 
-url: /room/<roomid>
+url: /rooms/<roomid>
 returns all information pertinent to a room. Id, name, chatId, and information about the canvases it contains (canvasid, canvasname, actionsInDrawing, comments.)
 
-url: /chat/<chatid> 
+url: /chats/<chatid> 
 returns all chat messages for a particular chatid.
 
 url: /chats
 returns all chats and the room they belong to.
 
-url: /message/<username>
+url: /messages/<username>
 returns all messages for a particular username.
 
-url: /comment/<canvasid>
+url: /comments/<canvasid>
 returns all comments over a specific canvas' comments. ids, comm, and user.
