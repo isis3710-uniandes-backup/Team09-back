@@ -17,12 +17,14 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 //Declatarions that link the resources to the main app express manager.
+//User routes
 app.get("/users/", users.getUsers);
 app.get("/users/:userid", users.getUser);
 app.post("/users/create", users.postUser);
 app.put("/users/edit/:userid",users.putUser);
 app.delete("/users/delete/:userid",users.deleteUser);
 
+//Group routes
 app.get("/groups/",groups.getGroups);
 app.get("/groups/:groupid",groups.getGroup);
 app.post("/groups/create", groups.postGroup);
@@ -30,40 +32,47 @@ app.post("/groups/:groupid/admins/:id", groups.postAdmin);
 app.post("/groups/:groupid/users/:id", groups.postUser);
 app.delete("/groups/delete/:groupid",groups.deleteGroup);
 
+//Room routes
 app.get("/rooms/", rooms.getRooms);
 app.get("/rooms/:roomid", rooms.getRoom);
 app.post("/rooms/create", rooms.postRoom);
 app.put("/rooms/edit/:roomid", rooms.putRoom);
 app.delete("/rooms/delete/:roomid",rooms.deleteRoom);
 
+//Canvas routes
 app.get("/canvas/", canvas.getCanvas);
 app.get("/canvas/:id", canvas.getCanva);
 app.post("/canvas/create", canvas.postCanvas);
 app.put("/canvas/edit/:id",canvas.putCanvas);
 app.delete("/canvas/delete/:id",canvas.deleteCanvas);
 
+//Chat routes
 app.get("/chats/", chats.getChats);
 app.get("/chats/:chatid", chats.getChat);
 app.post("/chats/create", chats.postChat);
 app.delete("/chats/delete/:chatid", chats.deleteChat);
 
+//Messages routes
 app.get("/messages/", messages.getMessages);
 app.get("/messages/:messageid", messages.getMessage);
 app.post("/messages/send", messages.postMessage);
 app.put("/messages/edit/:messageid",messages.putMessage);
 app.delete("/messages/delete/:messageid",messages.deleteMessage);
 
+//Sessions routes
 app.get("/sessions/", sessions.getSessions);
 app.post("/sessions/create", sessions.postSession);
 app.put("/sessions/:userid", sessions.putSession);
 app.delete("/sessions/delete/:sessionid", sessions.deleteSession);
 
+//Comments routes
 app.get("/comments/", comments.getComments);
 app.get("/comments/:commentid", comments.getComment);
 app.post("/comments/create", comments.postComment);
 app.put("/comments/edit/:commentid", comments.putComment);
 app.delete("/comments/delete/:commentid",comments.deleteComment);
 
+//Actions routes
 app.get("/actions/", actions.getActions);
 app.get("/actions/:svgPath", actions.getAction);
 app.post("/actions/create", actions.postAction);
