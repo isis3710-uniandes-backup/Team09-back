@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     canvasId: {type:DataTypes.INTEGER, primaryKey:true},
     name: DataTypes.STRING,
     description: DataTypes.STRING,
-    roomId: DataTypes.INTEGER
+    roomId: {type:DataTypes.INTEGER, references: 'rooms', referencesKey: 'roomId' }
   }, {timestamps: false});
 
   return Canvases;

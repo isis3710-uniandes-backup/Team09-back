@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     user: DataTypes.STRING,
     msg: DataTypes.STRING,
     timestamp:DataTypes.DATE,
-    chatId: DataTypes.INTEGER
+    chatId: {type:DataTypes.INTEGER, references: 'chats', referencesKey: 'chatId'}
   }, {timestamps: false});
 
   return Messages;
