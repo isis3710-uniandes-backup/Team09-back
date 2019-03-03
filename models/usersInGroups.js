@@ -7,5 +7,5 @@ module.exports = (sequelize, DataTypes) => {
     isAdmin: DataTypes.BOOLEAN
   }, {timestamps: false});
 
-  return Groups;
+  return UsersInGroups;
 };
