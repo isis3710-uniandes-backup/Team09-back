@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const db = require(__dirname.slice(0,__dirname.length-11)+'/models/');
 
 module.exports={
 	getMessages: function(req, res){
