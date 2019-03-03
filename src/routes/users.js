@@ -1,6 +1,7 @@
-const express = require('express');
-const app = express();
+//const express = require('express');
+//const app = express();
 const db = require(__dirname.slice(0,__dirname.length-11)+'/models/');
+
 
 module.exports={
 	getUsers: function(req, res){
@@ -16,7 +17,7 @@ module.exports={
 	getUser: function(req, res){
 		console.log(req.params.userid);
 		let id=parseInt(req.params.userid);
-		return db.Users.findById(id)
+		return db.Users.findByPk(id)
     		.then((user) => res.send(user))
     		.catch((err) => {
       		console.log('There was an error querying the user', JSON.stringify(err))
@@ -25,13 +26,42 @@ module.exports={
 
 	},
 	postUser: function(req, res){
-		console.log("Post user");
+  		return db.Users.create({ "username":req.body.username, "email":req.body.email, "password":req.body.password })
+    		.then((user) => res.send(user))
+    		.catch((err) => {
+      	console.log('***There was an error creating a user', JSON.stringify(contact))
+      return res.status(400).send(err)
+    });
+
 	},
 	putUser: function(req, res){
 		console.log("Put User "+req.params.userid);
+		const id = parseInt(req.params.userid)
+  		return db.Users.findByPk(id)
+  			.then((user) => {
+    		//const { username, email, password } = req.body
+    	if(user!==null){
+    	return user.update({ "username":req.body.username, "email":req.body.email, "password":req.body.password })
+      		.then(() => res.send(user))
+      		.catch((err) => {
+        	console.log('***Error updating user', JSON.stringify(err))
+        	res.status(400).send(err)
+      	})}
+      	else{
+      		res.status(400).send("No se encuentra el objeto")
+      	}
+  	});
 	},
 	deleteUser: function(req, res){
 		console.log("Delete user "+ req.params.userid);
+		const id = parseInt(req.params.userid)
+  		return db.Users.findByPk(id)
+    		.then((user) => user.destroy())
+    		.then(() => res.send({ user }))
+    			.catch((err) => {
+      			console.log('***Error deleting user', JSON.stringify(err))
+      		res.status(400).send(err)
+    });
 	}
 }
 

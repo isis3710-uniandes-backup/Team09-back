@@ -12,6 +12,9 @@ const messages = require("./src/routes/messages");
 const sessions = require("./src/routes/sessions");
 const comments = require("./src/routes/comments");
 const actions = require("./src/routes/actions");
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 //Declatarions that link the resources to the main app express manager.
 app.get("/users/", users.getUsers);
