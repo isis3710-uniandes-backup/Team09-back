@@ -1,6 +1,7 @@
-const express = require('express');
-const app = express();
+//const express = require('express');
+//const app = express();
 const db = require(__dirname.slice(0,__dirname.length-11)+'/models/');
+const datify = require('../datify.js');
 
 module.exports={
 	getSessions: function(req, res){
@@ -8,13 +9,13 @@ module.exports={
 		return db.Sessions.findAll()
     		.then((sessions) => res.send(sessions))
     		.catch((err) => {
-      		console.log('There was an error querying users', JSON.stringify(err))
+      		console.log('There was an error querying sessions', JSON.stringify(err))
       	return res.send(err)
     });
 	},
 	postSession: function(req, res){
 		console.log("Post session");
-		return db.Sessions.create({ "userId":req.body.userId, "startTime":new Date(), "endtime":null })
+		return db.Sessions.create({ "userId":req.body.userId, "startTime":datify.getDate(), "entTime":null })
     		.then((session) => res.send(session))
     		.catch((err) => {
       	console.log('***There was an error creating a user', JSON.stringify(err))
@@ -28,7 +29,7 @@ module.exports={
   			.then((session) => {
     		//const { username, email, password } = req.body
     	if(session!==null){
-    	return session.update({ "userId":req.body.userId, "startTime":req.body.startTime, "endtime":req.body.endTime })
+    	return session.update({ "userId":req.body.userId, "startTime":req.body.startTime, "entTime":req.body.entTime })
       		.then(() => res.send(session))
       		.catch((err) => {
         	console.log('***Error updating user', JSON.stringify(err))

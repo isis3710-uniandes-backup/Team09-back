@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     sessionId: {type:DataTypes.INTEGER, primaryKey:true},
     userId: {type:DataTypes.INTEGER, references: 'users', referencesKey: 'userID'},
     startTime:DataTypes.DATE,
-    endTime:DataTypes.DATE
+    entTime:DataTypes.DATE
   }, {timestamps: false});
 
   return Sessions;

@@ -1,4 +1,5 @@
 const db = require(__dirname.slice(0,__dirname.length-11)+'/models/');
+const datify = require('../datify.js');
 
 module.exports={
 	getActions: function(req, res){
@@ -22,7 +23,7 @@ module.exports={
 	},
 	postAction: function(req, res){
 		console.log("Post action");
-		return db.Actions.create({"userId":req.body.userId, "canvasId":req.body.canvasId, "svgPath":req.body.svgPath, "time":new Date(), "sessionId":req.body.sessionId })
+		return db.Actions.create({"userId":req.body.userId, "canvasId":req.body.canvasId, "svgPath":req.body.svgPath, "time":datify.getDate(), "sessionId":req.body.sessionId })
     		.then((action) => res.send(action))
     		.catch((err) => {
       	console.log('***There was an error creating an action', JSON.stringify(err))
