@@ -13,7 +13,7 @@ Logic Drawing ofrece además la posibilidad de exportar de maneras intuitivas lo
 
 ## 2) Decisiones de construcción de aplicación:
 Decidimos usar una base de datos relacional desplegada con SQLite, ya que para nuestro problema, necesitabamos hacer muchas consultas de manera rápida. Además, siguiendo el modelo UML (ver imagen), era fácil visualizar las relaciones mediante una base de datos.
-![alt text](https://github.com/isis3710-uniandes/Team09-back/blob/master/Design%20Constraints/Class%20Model.png)
+![alt text](https://github.com/isis3710-uniandes/Team09-back/blob/master/docs/Class%20Model.png)
 
 Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un archivo .db, visualizable con cualquier editor de bases de datos (Recomendamos SQLite Studio). 
 
@@ -65,7 +65,7 @@ Logic Drawing offers the possibility to export your designs in intuitive manners
 
 ## 2) Application design decisions: 
 We decided to use a relational database deployed with SQLite, since our problem requires plenty of queries in a quick response manner. We also designed a UML (see image) in which it is easy to visualize the relationships of our resources as a database.
-![alt text](https://github.com/isis3710-uniandes/Team09-back/blob/master/Design%20Constraints/Class%20Model.png)
+![alt text](https://github.com/isis3710-uniandes/Team09-back/blob/master/docs/Class%20Model.png)
 
 As a consequence, we are NOT persisting our information with JSON files, instead, we are using a .db archive, which is able to be visualized in any database editor (although we recommend SQLite Studio).
 
