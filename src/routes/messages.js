@@ -1,7 +1,7 @@
 //const express = require('express');
 //const app = express();
 const db = require(__dirname.slice(0,__dirname.length-11)+'/models/');
-const datify = require('../datify');
+const datify = require('../datify.js');
 
 module.exports={
 	getMessages: function(req, res){
