@@ -26,6 +26,7 @@ Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un ar
 
 #### d) Abrir terminal, y moverse hacia el directorio en donde se encuentra el proyecto. Luego, inicializar el servidor.
 > cd ../Team09-back
+Luego
 > node index.js
 
 #### e) Nuestro servidor estará corriendo en localhost sobre el puerto 3000. Las colecciones de Postman automáticamente tienen esto configurado, pero se pueden probar todas las conexiones manualmente con las direcciones del API descritas en nuestra documentación.
