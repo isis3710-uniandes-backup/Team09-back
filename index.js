@@ -12,7 +12,8 @@ const messages = require("./src/routes/messages");
 const sessions = require("./src/routes/sessions");
 const comments = require("./src/routes/comments");
 const actions = require("./src/routes/actions");
-const usersInGroups = require("./src/routes/usersInGroups");
+
+//const usersInGroups = require("./src/routes/usersInGroups");
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
@@ -77,9 +78,10 @@ app.get("/actions/:svgPath", actions.getAction);
 app.post("/actions/create", actions.postAction);
 app.delete("/actions/delete/:actionid", actions.deleteAction);
 
-app.post("/groups/:groupid/admins/:id", usersInGroups.postAdmin);
-app.post("/groups/:groupid/users/:id", usersInGroups.postUser);
-
+/*FIX THIS MANY TO MANY RELATIONSHIP FUTURE TODO
+app.post("/groups/admins", groups.postAdmin);
+app.post("/groups/users", groups.postUser);
+*/
 app.listen(port,() => {
 	console.log('Serverapp listening on port 3000 !');
 });
