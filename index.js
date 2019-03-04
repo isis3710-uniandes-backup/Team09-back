@@ -12,6 +12,7 @@ const messages = require("./src/routes/messages");
 const sessions = require("./src/routes/sessions");
 const comments = require("./src/routes/comments");
 const actions = require("./src/routes/actions");
+const usersInGroups = require("./src/routes/usersInGroups");
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
@@ -28,8 +29,6 @@ app.delete("/users/delete/:userid",users.deleteUser);
 app.get("/groups/",groups.getGroups);
 app.get("/groups/:groupid",groups.getGroup);
 app.post("/groups/create", groups.postGroup);
-app.post("/groups/:groupid/admins/:id", groups.postAdmin);
-app.post("/groups/:groupid/users/:id", groups.postUser);
 app.delete("/groups/delete/:groupid",groups.deleteGroup);
 
 //Room routes
@@ -77,6 +76,9 @@ app.get("/actions/", actions.getActions);
 app.get("/actions/:svgPath", actions.getAction);
 app.post("/actions/create", actions.postAction);
 app.delete("/actions/delete/:actionid", actions.deleteAction);
+
+app.post("/groups/:groupid/admins/:id", usersInGroups.postAdmin);
+app.post("/groups/:groupid/users/:id", usersInGroups.postUser);
 
 app.listen(port,() => {
 	console.log('Serverapp listening on port 3000 !');
