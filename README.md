@@ -28,3 +28,15 @@ Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un ar
 > cd ../Team09-back && node index.js 
 
 #### e) Nuestro servidor estará corriendo en localhost sobre el puerto 3000. Las colecciones de Postman automáticamente tienen esto configurado, pero se pueden probar todas las conexiones manualmente con las direcciones del API descritas en nuestra documentación.
+
+## 4) Pruebas
+
+### En las pruebas, hemos incluído dos tipos de pruebas: Las automatizadas y las no automatizadas.
+
+### Las pruebas "DELETE" NUNCA son automatizadas por lo que ella conlleva más procesamiento. Recomendamos hacerlas sólo 1 vez y luego restaurar la base de datos para mantener la integridad de esta.
+
+### a) Todas las pruebas en su versión NO automatizada se encuentran en la colección "Entrega2Web". 
+
+### b) Las pruebas "GET", "POST" y "PUT" son completamente automatizadas en su colección correspondiente.
+
+Dejamos a discreción de la persona probando usar las pruebas automáticas o no, por eso incluímos ambos tipos de pruebas en nuestras colecciones.
