@@ -1,8 +1,8 @@
 # Español
 
 *Este proyecto hace parte del curso "Programación con Tecnologías Web" de Ingeniería de Sistemas de la Universidad de los Andes.
-Fue desarollado en el periodo 2019-1. El equipo 9 está conformado por:
-James Lake 201531545
+Fue desarollado en el periodo 2019-1. El equipo 9 está conformado por:  
+James Lake 201531545  
 José Daniel Cárdenas 201313488*
 
 ## 1) Descripción del projecto.
@@ -30,7 +30,8 @@ Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un ar
 #### c) Clonar el repositorio a su equipo. Los caminos que se usan son relativos por lo que no importa la dirección en donde se clone.
 
 #### d) Abrir terminal, y moverse hacia el directorio en donde se encuentra el proyecto. Luego, inicializar el servidor.
-> cd ../Team09-back && node index.js 
+> cd ../Team09-back  
+> node index.js 
 
 #### e) Nuestro servidor estará corriendo en localhost sobre el puerto 3000. Las colecciones de Postman automáticamente tienen esto configurado, pero se pueden probar todas las conexiones manualmente con las direcciones del API descritas en nuestra documentación.
 
@@ -53,8 +54,8 @@ Dejamos a discreción de la persona probando usar las pruebas automáticas o no,
 # English
 
 *This project belongs to the course "Web Development" from the Systems Engineering major in the Universidad de los Andes, Colombia.
-It was developed in the first semester of 2019. Team 9 is conformed by:
-James Lake 201531545
+It was developed in the first semester of 2019. Team 9 is conformed by:  
+James Lake 201531545  
 José Daniel Cárdenas 201313488*
 
 ## 1) Project description
@@ -81,7 +82,8 @@ As a consequence, we are NOT persisting our information with JSON files, instead
 #### c) Clone the repository to your machine. The paths set to run are relative, so it doesn't matter the directory you are downloading the repository.
 
 #### d) Open terminal and move to the directory in which the repository was downloaded into. Then, execute the server:
-> cd ../Team09-back && node index.js 
+> cd ../Team09-back  
+> node index.js 
 
 #### e) Our server will be running on localhost on the port 3000. The collections within Postman have this preconfigured, but you can test all addresses with the API described in our documentation.
 
