@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "f6482771-8256-474e-b373-8cbd404feefb",
+		"name": "Entrega2Gets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/users/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "10ab9138-b01a-49b5-a345-aa980842f88f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/10030",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9ad85606-9a85-4cc2-8651-405b36cdb5ea",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/users/10030",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"10030"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/actions/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "628c4b18-da01-4476-9500-203781a7a120",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/actions/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/actions/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/actions/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/canvas/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8223602e-4178-4684-893b-ece43fcdb1a9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/canvas/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"canvas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/canvas/350",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "17f34189-d913-4741-984c-93f18d3e9159",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/canvas/30",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"canvas",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/sessions/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc40f08b-a1d9-4952-a236-420a8c3d1087",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/sessions/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sessions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13ed5d6b-f05a-406c-92b8-8c8dbe4768a8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/comments/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/101",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2cbc6928-1c07-4648-8980-b16cb71857c5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/comments/101",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "078ee828-aeba-4c6b-9419-087904f92446",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/43",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e310624-86dd-42fc-bb4c-a6f90b8f8d91",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/groups/43",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "de925681-bc5a-45a9-93ff-848889cbf275",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/116",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82eda61b-3ec2-4aa9-91f7-587ca7fb742d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/116",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b44ca9a0-4013-4038-82b3-3a48acffd3b5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/chats/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/151",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09272477-3bdd-49b7-85c6-19472f2ff920",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/chats/151",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"151"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bc6f30b0-c9c4-4585-91c6-119537043b77",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/messages/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/2006",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c52ef70e-ad4c-42b3-8db7-9c4768fd77b3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/messages/2006",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"2006"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7ccc250d-b03a-41b8-854e-f9dfc6cb9fb8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c48236a5-bcaf-4ca1-a24c-2d86d2489960",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

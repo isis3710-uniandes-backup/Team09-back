@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "2c878200-6925-4a77-86eb-bb0eab5bb038",
+		"name": "Entrega2Puts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/users/edit/10030",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2db3ab8c-6496-4a0d-b2fd-097fa681a33f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"usuario2108\",\n\t\"email\":\"falsoE\",\n\t\"password\":\"clavefalsa\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/edit/10030",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"edit",
+						"10030"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/canvas/edit/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "de675cf3-38d5-4a79-93ff-f499af88bb9f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"nombre editado\",\n    \"description\": \"descripcion editada\",\n    \"roomId\": 115\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/canvas/edit/333",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"canvas",
+						"edit",
+						"333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/sessions/102",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e6ea4c16-6569-4694-ac28-af4f5e3c80bf",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 10002,\n    \"startTime\": \"2019-03-04T02:44:36.000Z\",\n    \"entTime\": \"2019-03-04T02:45:36.000Z\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/sessions/102",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sessions",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/102",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e019415-3130-4d13-871b-da493c5f925c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"canvasId\":302,\n\t\"comm\":\"comentario\",\n\t\"user\":\"usuario34\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/comments/102",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/edit/117",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c3409def-31cf-4928-9494-b32b63c0de59",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"edited room\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/edit/117",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"edit",
+						"117"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/edit/2006",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "33cc9e11-4e9c-46e1-98b4-df8f77cd8ea9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"msg\": \"example editted msg\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/messages/edit/2006",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"edit",
+						"2006"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

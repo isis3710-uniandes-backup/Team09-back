@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "cb6dd672-0e5e-4711-8579-614d8552f904",
+		"name": "Entrega2Posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/users/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "05b705b9-4793-4c2d-a16b-1e105ac196d4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"usuario1\",\n\t\"email\":\"falsoE\",\n\t\"password\":\"clavefalsa\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/actions/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "567aa4ae-ee2e-4eea-bd38-351ab62bae8c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":10050,\n\t\"canvasId\":350,\n\t\"svgPath\": \"mamamamaegeg\",\n\t\"sessionId\":150\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/actions/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actions",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/canvas/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f264b774-5bbe-460f-9431-a89553c220f0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"nombre\",\n    \"description\": \"descripcion\",\n    \"roomId\": 150\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/canvas/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"canvas",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/sessions/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "763514ad-ae9e-4c58-9918-6db1c28fdc1a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":10001\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/sessions/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sessions",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "45dbbe02-41d4-4dbe-b094-eb29b263f148",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"canvasId\":302,\n\t\"comm\":\"comentario\",\n\t\"user\":\"usuario34\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/comments/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a46ae38-8962-40e2-8c50-f965d41e6901",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Test Group\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/groups/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b37cd998-2ef7-48bf-84fd-23aabd7f8402",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Test room\",\n\t\"groupId\":\"50\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "12187e10-567f-44a0-ab98-372456cdecef",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roomId\": 150\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/chats/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/send",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7e056374-be4e-4311-9bfd-d74932201e8a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": \"example user\",\n\t\"msg\": \"example msg\",\n\t\"chatId\": 153\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/messages/send",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
