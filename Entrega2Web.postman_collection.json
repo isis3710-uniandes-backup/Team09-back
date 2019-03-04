@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "613c3f54-c3c8-4268-be47-e54d4807807f",
+		"_postman_id": "f6482771-8256-474e-b373-8cbd404feefb",
 		"name": "Entrega2Web",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -36,7 +36,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3000/users/1",
+			"name": "localhost:3000/users/10030",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -45,14 +45,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/users/1",
+					"raw": "localhost:3000/users/10030",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"users",
-						"1"
+						"10030"
 					]
 				}
 			},
@@ -89,7 +89,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3000/users/edit/1",
+			"name": "localhost:3000/users/edit/10030",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -105,7 +105,7 @@
 					"raw": "{\n\t\"username\":\"usuario2108\",\n\t\"email\":\"falsoE\",\n\t\"password\":\"clavefalsa\"\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/users/edit/1",
+					"raw": "localhost:3000/users/edit/10030",
 					"host": [
 						"localhost"
 					],
@@ -113,14 +113,14 @@
 					"path": [
 						"users",
 						"edit",
-						"1"
+						"10030"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "localhost:3000/users/delete/1",
+			"name": "localhost:3000/users/delete/10030",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -203,7 +203,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"userId\":2,\n\t\"canvasId\":2,\n\t\"svgPath\": \"mamamamaegeg\",\n\t\"sessionId\":1\n}"
+					"raw": "{\n\t\"userId\":10050,\n\t\"canvasId\":350,\n\t\"svgPath\": \"mamamamaegeg\",\n\t\"sessionId\":150\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/actions/create",
@@ -274,7 +274,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3000/canvas/1",
+			"name": "localhost:3000/canvas/350",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -310,7 +310,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"nombre\",\n    \"description\": \"descripcion\",\n    \"roomId\": 100\n}"
+					"raw": "{\n    \"name\": \"nombre\",\n    \"description\": \"descripcion\",\n    \"roomId\": 150\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/canvas/create",
@@ -340,10 +340,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"nombre\",\n    \"description\": \"descripcion1\",\n    \"roomId\": 100\n}"
+					"raw": "{\n    \"name\": \"nombre editado\",\n    \"description\": \"descripcion editada\",\n    \"roomId\": 115\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/canvas/edit/1",
+					"raw": "localhost:3000/canvas/edit/333",
 					"host": [
 						"localhost"
 					],
@@ -351,14 +351,14 @@
 					"path": [
 						"canvas",
 						"edit",
-						"1"
+						"333"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "localhost:3000/canvas/delete/1",
+			"name": "localhost:3000/canvas/delete/310",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -418,7 +418,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"userId\":1\n}"
+					"raw": "{\n\t\"userId\":10001\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/sessions/create",
@@ -435,7 +435,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3000/sessions/1",
+			"name": "localhost:3000/sessions/102",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -448,24 +448,24 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": 2,\n    \"startTime\": \"2019-03-04T02:44:36.000Z\",\n    \"entTime\": \"2019-03-04T02:45:36.000Z\"\n}"
+					"raw": "{\n    \"userId\": 10002,\n    \"startTime\": \"2019-03-04T02:44:36.000Z\",\n    \"entTime\": \"2019-03-04T02:45:36.000Z\"\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/sessions/1",
+					"raw": "localhost:3000/sessions/102",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"sessions",
-						"1"
+						"102"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "localhost:3000/sessions/delete/1",
+			"name": "localhost:3000/sessions/delete/102",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -512,7 +512,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3000/comments/1",
+			"name": "localhost:3000/comments/101",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -548,7 +548,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"canvasId\":2,\n\t\"comm\":\"comentario\",\n\t\"user\":\"usuario34\"\n}"
+					"raw": "{\n\t\"canvasId\":302,\n\t\"comm\":\"comentario\",\n\t\"user\":\"usuario34\"\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/comments/create",
@@ -565,7 +565,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3000/comments/1",
+			"name": "localhost:3000/comments/102",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -578,24 +578,24 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"canvasId\":2,\n\t\"comm\":\"comentario\",\n\t\"user\":\"usuario34\"\n}"
+					"raw": "{\n\t\"canvasId\":302,\n\t\"comm\":\"comentario\",\n\t\"user\":\"usuario34\"\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/comments/1",
+					"raw": "localhost:3000/comments/102",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"comments",
-						"1"
+						"102"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "localhost:3000/comments/1",
+			"name": "localhost:3000/comments/102",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -604,14 +604,523 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/comments/1",
+					"raw": "localhost:3000/comments/102",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"comments",
-						"1"
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/43",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/groups/43",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Test Group\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/groups/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/groups/43",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Test Group\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/groups/43",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/116",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/116",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Test room\",\n\t\"groupId\":\"50\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/edit/117",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"edited room\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/edit/117",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"edit",
+						"117"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/rooms/delete/116",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/rooms/delete/116",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rooms",
+						"delete",
+						"116"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/chats/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/151",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/chats/151",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"151"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roomId\": 150\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/chats/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/chats/delete/151",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/chats/delete/151",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"delete",
+						"151"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/messages/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/2006",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/messages/2006",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"2006"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": \"example user\",\n\t\"msg\": \"example msg\",\n\t\"chatId\": 153\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/messages/send",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/edit/2006",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"msg\": \"example editted msg\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/messages/edit/2006",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"edit",
+						"2006"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/messages/delete/2006",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/messages/delete/2006",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"delete",
+						"2006"
 					]
 				}
 			},
