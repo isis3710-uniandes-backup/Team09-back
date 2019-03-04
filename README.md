@@ -6,7 +6,7 @@ Logic Drawing parte de la premisa de "Divide y Truinfarás". Nuestro propósito 
   
 Logic Drawing ofrece además la posibilidad de exportar de maneras intuitivas los diseños hechos, ver los cambios que se hicieron como un historial de cambios, comentar y chatear en las salas. Logic Drawing pretende expandirse a otras funcionalidades en el tiempo próximo.
 
-### 2) Decisiones de construcción de aplicación:
+## 2) Decisiones de construcción de aplicación:
 Decidimos usar una base de datos relacional desplegada con SQLite, ya que para nuestro problema, necesitabamos hacer muchas consultas de manera rápida. Además, siguiendo el modelo UML (ver imagen), era fácil visualizar las relaciones mediante una base de datos.
 ![alt text](https://github.com/isis3710-uniandes/Team09-back/blob/master/Design%20Constraints/Class%20Model.png)
 
