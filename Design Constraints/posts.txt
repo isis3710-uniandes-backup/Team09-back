@@ -13,20 +13,6 @@ receives the following and creates a group in the server with random id. Adds th
 	userid: <userid>
 }
 
-url: /groups/<groupId>/admins/<id>
-receives an id of a user and adds it to the admins. 
-{
-	groupId: <groupId>
-	userId: <userId>
-}
-
-url: /groups/<groupId>/users/<id>
-receives an id of a user and adds it to the userlist of the group. 
-{
-	groupId: <groupId>
-	userId: <userId>
-}
-
 url: /sessions/create
 This post is done automatically by the server once the user logs in and sends it as date. A put is performed to close session. Receives:
 {
@@ -59,6 +45,7 @@ creates a comment based on the username and a string. Receives
 {
 	comm: <comment>,
 	user: <username>
+	canvasId: <canvasId>
 }
 
 url: /messages/send
