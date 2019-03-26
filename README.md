@@ -25,7 +25,7 @@ Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un ar
 
 #### a) Asegurar tener node en la versión 10.0.0 o mayor, y NPM en la versión 6.0.0 o mayor.
 
-#### b) Tener instalado sqlite, sqlite3, sequelize, sequelize-cly, npm-pre-gyp, npm-gyp, express y body-parser. Incluímos todas en el repositorio de manera configurada para que corra, sin embargo es recomendable instalar al menos las últimas 4 de manera global.
+#### b) Instalar las dependencias de Node. Correr el comando npm install
 
 #### c) Clonar el repositorio a su equipo. Los caminos que se usan son relativos por lo que no importa la dirección en donde se clone.
 
@@ -77,7 +77,7 @@ As a consequence, we are NOT persisting our information with JSON files, instead
 
 #### a) Make sure you have node installed with version 10.0.0 or above, and NPM in version 6.0.0 or above.
 
-#### b) You must have installed sqlite, sqlite3, sequelize, sequelize-cly, npm-pre-gyp, npm-gyp, express and body-parser. We included all the dependencies in the repository, configured for it to run as-is, however, it is recomended to install the latter 4 globally on your machine.
+#### b) Install Node dependencies. Run command npm install
 
 #### c) Clone the repository to your machine. The paths set to run are relative, so it doesn't matter the directory you are downloading the repository.
 
