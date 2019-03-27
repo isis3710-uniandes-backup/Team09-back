@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const port = 3001;
 
 //Constants for the objects that manage petitions for each resource.
@@ -27,9 +29,16 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'front/build')));
+app.use(express.static(path.join(__dirname, '../Team09-front/build')));
 
 app.use(bodyParser.json());
+
+//sockets.io declarations
+function onConnection(socket){
+	socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+}
+  
+io.on('connection', onConnection);
 
 //Declatarions that link the resources to the main app express manager.
 //User routes
@@ -96,6 +105,6 @@ app.delete("/api/actions/delete/:actionid", actions.deleteAction);
 app.post("/api/groups/admins", groups.postAdmin);
 app.post("/api/groups/users", groups.postUser);
 
-app.listen(port,() => {
+http.listen(port,() => {
 	console.log('Serverapp listening on port 3001 !');
 });
