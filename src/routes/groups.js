@@ -67,5 +67,15 @@ module.exports={
         res.status(400).send(err)
     // We don't need spread here, since only the results will be returned for select queries
     });
+  },
+  	getRooms: function(req,res){
+
+      return db.sequelize.query("select * from rooms where groupId="+req.params.groupid, { type: db.sequelize.QueryTypes.SELECT})
+        .then((rooms) => res.send(rooms))
+        .catch((err) => {
+          console.log('There was an error querying the users', JSON.stringify(err))
+        res.status(400).send(err)
+    // We don't need spread here, since only the results will be returned for select queries
+    });
   }
 }
