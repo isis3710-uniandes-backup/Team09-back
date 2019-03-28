@@ -57,5 +57,15 @@ module.exports={
       			console.log('***Error deleting group', JSON.stringify(err))
       		res.status(400).send(err)
     });
-	}
+	},
+	getUsers: function(req,res){
+
+      return db.sequelize.query("select userId,  username, email, isAdmin from 'usersInGroups' natural join users where groupId="+req.params.groupid, { type: db.sequelize.QueryTypes.SELECT})
+        .then((users) => res.send(users))
+        .catch((err) => {
+          console.log('There was an error querying the users', JSON.stringify(err))
+        res.status(400).send(err)
+    // We don't need spread here, since only the results will be returned for select queries
+    });
+  }
 }

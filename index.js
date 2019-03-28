@@ -54,6 +54,7 @@ app.get("/api/groups/",groups.getGroups);
 app.get("/api/groups/:groupid",groups.getGroup);
 app.post("/api/groups/create", groups.postGroup);
 app.delete("/api/groups/delete/:groupid",groups.deleteGroup);
+app.get("/api/groups/:groupid/users",groups.getUsers);
 
 //Room routes
 app.get("/api/rooms/", rooms.getRooms);
