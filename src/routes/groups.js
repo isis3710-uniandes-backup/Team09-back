@@ -77,5 +77,17 @@ module.exports={
         res.status(400).send(err)
     // We don't need spread here, since only the results will be returned for select queries
     });
-  }
+	},
+
+	getGroupsFromUser: function(req,res){
+
+		return db.sequelize.query("select groupId, name from 'usersInGroups' natural join groups where userID="+req.params.userid, { type: db.sequelize.QueryTypes.SELECT})
+			.then((groups) => res.send(groups))
+			.catch((err) => {
+				console.log('There was an error querying the groups', JSON.stringify(err))
+			res.status(400).send(err)
+	// We don't need spread here, since only the results will be returned for select queries
+	});
+}
+
 }

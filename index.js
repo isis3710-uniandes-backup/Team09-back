@@ -61,6 +61,7 @@ app.post("/api/groups/create", groups.postGroup);
 app.delete("/api/groups/delete/:groupid",groups.deleteGroup);
 app.get("/api/groups/:groupid/users",groups.getUsers);
 app.get("/api/groups/:groupid/rooms",groups.getRooms);
+app.get("/api/groups/user/:userid", groups.getGroupsFromUser);
 
 //Room routes
 app.get("/api/rooms/", rooms.getRooms);
