@@ -28,7 +28,7 @@ module.exports={
 	getUserByName: function(req, res){
 		console.log(req.params.username);
 		let name=req.params.username;
-		return db.Users.findAll({attributes:['userID','username','email','password'],where: {username: name}})
+		return db.Users.findAll({attributes:['userID','username','email','password','profilePicturePath'],where: {username: name}})
     		.then((user) => res.send(user))
     		.catch((err) => {
       		console.log('There was an error querying the user', JSON.stringify(err))
@@ -52,7 +52,10 @@ module.exports={
   			.then((user) => {
     		//const { username, email, password } = req.body
     	if(user!==null){
-    	return user.update({ "username":req.body.username, "email":req.body.email, "password":req.body.password })
+			user.dataValues.userID=id;
+			user._previousDataValues.userID=id;
+			console.log(user);
+    	return user.update({ "userID": id,"username":req.body.username, "email":req.body.email, "password":req.body.password, "profilePicturePath":req.body.profilePicturePath })
       		.then(() => res.send(user))
       		.catch((err) => {
         	console.log('***Error updating user', JSON.stringify(err))
