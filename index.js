@@ -66,6 +66,8 @@ app.get("/api/groups/user/:userid", groups.getGroupsFromUser);
 //Room routes
 app.get("/api/rooms/", rooms.getRooms);
 app.get("/api/rooms/:roomid", rooms.getRoom);
+app.get("/api/rooms/:roomid/canvas", rooms.getCanvases);
+app.get("/api/rooms/:roomid/messages", rooms.getMessages);
 app.post("/api/rooms/create", rooms.postRoom);
 app.put("/api/rooms/edit/:roomid", rooms.putRoom);
 app.delete("/api/rooms/delete/:roomid",rooms.deleteRoom);

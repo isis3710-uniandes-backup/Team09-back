@@ -57,5 +57,25 @@ module.exports={
       			console.log('***Error deleting room', JSON.stringify(err))
       		res.status(400).send(err)
     });
-	}
+	},
+  getCanvases: function(req,res){
+
+      return db.sequelize.query("select * from canvases where roomId="+req.params.roomid, { type: db.sequelize.QueryTypes.SELECT})
+        .then((canvas) => res.send(canvas))
+        .catch((err) => {
+          console.log('There was an error querying the users', JSON.stringify(err))
+        res.status(400).send(err)
+    // We don't need spread here, since only the results will be returned for select queries
+    });
+  },
+  getMessages: function(req,res){
+
+      return db.sequelize.query("select * from messages natural join chats where roomId="+req.params.roomid, { type: db.sequelize.QueryTypes.SELECT})
+        .then((canvas) => res.send(canvas))
+        .catch((err) => {
+          console.log('There was an error querying the users', JSON.stringify(err))
+        res.status(400).send(err)
+    // We don't need spread here, since only the results will be returned for select queries
+    });
+  }
 }
