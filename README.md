@@ -25,17 +25,17 @@ Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un ar
 
 #### a) Asegurar tener node en la versión 10.0.0 o mayor, y NPM en la versión 6.0.0 o mayor.
 
-#### b) Instalar las dependencias de Node. Correr el comando npm install
+#### b) Clonar el repositorio a su equipo. Los caminos que se usan son relativos a 1 directorio. Deben de estar en el mismo directorio padre el back y el front.
 
-#### c) Clonar el repositorio a su equipo. Los caminos que se usan son relativos por lo que no importa la dirección en donde se clone.
+#### c) Instalar las dependencias de Node. Correr el comando npm install
 
 #### d) Abrir terminal, y moverse hacia el directorio en donde se encuentra el proyecto. Luego, inicializar el servidor.
 > cd ../Team09-back  
-> node index.js 
+> npm start
 
-#### e) Nuestro servidor estará corriendo en localhost sobre el puerto 3000. Las colecciones de Postman automáticamente tienen esto configurado, pero se pueden probar todas las conexiones manualmente con las direcciones del API descritas en nuestra documentación.
+#### e) Nuestro servidor estará corriendo en localhost sobre el puerto 3001. Las colecciones de Postman automáticamente tienen esto configurado, pero se pueden probar todas las conexiones manualmente con las direcciones del API descritas en nuestra documentación.
 
-## 4) Pruebas
+## 4) Pruebas (no funcionales en release 3 por los cambios)
 
 ### En las pruebas, hemos incluído dos tipos de pruebas: Las automatizadas y las no automatizadas.
 
@@ -77,17 +77,17 @@ As a consequence, we are NOT persisting our information with JSON files, instead
 
 #### a) Make sure you have node installed with version 10.0.0 or above, and NPM in version 6.0.0 or above.
 
-#### b) Install Node dependencies. Run command npm install
+#### b) Clone the repository to your machine. The paths set to run are relative to 1 directory. Parent directory of front and back must be the same.
 
-#### c) Clone the repository to your machine. The paths set to run are relative, so it doesn't matter the directory you are downloading the repository.
+#### c) Install Node dependencies. Run command npm install
 
 #### d) Open terminal and move to the directory in which the repository was downloaded into. Then, execute the server:
 > cd ../Team09-back  
-> node index.js 
+> npm start 
 
-#### e) Our server will be running on localhost on the port 3000. The collections within Postman have this preconfigured, but you can test all addresses with the API described in our documentation.
+#### e) Our server will be running on localhost on the port 3001. The collections within Postman have this preconfigured, but you can test all addresses with the API described in our documentation.
 
-## 4) Tests
+## 4) Tests (non functional as of release 3)
 
 ### Within the tests, we have included two types: Automatic and not automatic.
 
