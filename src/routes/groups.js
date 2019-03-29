@@ -81,7 +81,7 @@ module.exports={
 
 	getGroupsFromUser: function(req,res){
 
-		return db.sequelize.query("select groupId, name from 'usersInGroups' natural join groups where userID="+req.params.userid, { type: db.sequelize.QueryTypes.SELECT})
+		return db.sequelize.query("select groups.id, groups.name from 'usersInGroups', 'groups' where usersInGroups.userID="+req.params.userid, { type: db.sequelize.QueryTypes.SELECT})
 			.then((groups) => res.send(groups))
 			.catch((err) => {
 				console.log('There was an error querying the groups', JSON.stringify(err))
