@@ -23,7 +23,7 @@ module.exports={
     });
 	},
 	postRoom: function(req, res){
-		return db.Rooms.create({ "name":req.body.name, "groupId":req.body.groupId })
+		return  db.sequelize.query('insert into rooms (name, groupId) values ("'+req.body.name+'", "'+req.body.groupId+'"); SELECT last_insert_rowid()' )
     		.then((room) => res.send(room))
     		.catch((err) => {
       	console.log('***There was an error creating a room', JSON.stringify(contact))
