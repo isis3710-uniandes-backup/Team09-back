@@ -46,9 +46,18 @@ app.use(function(req,res,next){
 
 app.use(bodyParser.json());
 
+var messagesList=[];
+
 //sockets.io declarations
 function onConnection(socket){
+	
+	socket.emit('messages',messagesList);
 	socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+	socket.on('new-message', function(data) {
+		messagesList.push(data);
+		socket.broadcast.emit('messages', messagesList);
+	});
+	//socket.on('messages', (data) => socket.broadcast.emit('message', data));
 }
   
 io.on('connection', onConnection);
