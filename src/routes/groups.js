@@ -23,7 +23,7 @@ module.exports={
     });
 	},
 	postGroup: function(req, res){
-		return db.Groups.create({ "name": req.body.name })
+		return db.sequelize.query('insert into groups (name) values ("'+req.body.name+'"); SELECT last_insert_rowid()' )
 			.then((group) => res.send(group))
     		.catch((err) => {
       	console.log('***There was an error creating a group')
@@ -31,7 +31,7 @@ module.exports={
     });
 	},
 	postAdmin: function(req, res){
-		return db.UsersInGroups.create({ "groupId":req.body.groupId, "userId":req.body.userId, "isAdmin": true })
+		return db.sequelize.query(`insert into usersInGroups (groupId, userId, isAdmin) values ("${req.body.groupId}","${req.body.userId}",true); select last_insert_rowid()`)
     		.then((user) => res.send(user))
     		.catch((err) => {
       	console.log('***There was an error giving admin priviledges to user')
@@ -81,7 +81,7 @@ module.exports={
 
 	getGroupsFromUser: function(req,res){
 
-		return db.sequelize.query("select groups.id, groups.name from 'usersInGroups', 'groups' where usersInGroups.userID="+req.params.userid, { type: db.sequelize.QueryTypes.SELECT})
+		return db.sequelize.query("select usersInGroups.groupId, groups.name from 'usersInGroups', 'groups' where usersInGroups.userID="+req.params.userid +" and usersInGroups.groupId = groups.id", { type: db.sequelize.QueryTypes.SELECT})
 			.then((groups) => res.send(groups))
 			.catch((err) => {
 				console.log('There was an error querying the groups', JSON.stringify(err))

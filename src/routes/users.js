@@ -48,23 +48,37 @@ module.exports={
 	putUser: function(req, res){
 		console.log("Put User "+req.params.userid);
 		const id = parseInt(req.params.userid)
-  		return db.Users.findByPk(id)
-  			.then((user) => {
-    		//const { username, email, password } = req.body
-    	if(user!==null){
-			user.dataValues.userID=id;
-			user._previousDataValues.userID=id;
-			console.log(user);
-    	return user.update({ "userID": id,"username":req.body.username, "email":req.body.email, "password":req.body.password, "profilePicturePath":req.body.profilePicturePath })
-      		.then(() => res.send(user))
-      		.catch((err) => {
-        	console.log('***Error updating user', JSON.stringify(err))
-        	res.status(400).send(err)
-      	})}
-      	else{
-      		res.status(400).send("No se encuentra el objeto")
-      	}
-  	});
+		var adds='';
+		console.log(req.body);
+		if(req.body.username!=''){
+			adds+=`username="${req.body.username}"`;
+		}
+		if(req.body.email!=''){
+			if(adds!=''){
+				adds+=', ';
+			}
+			adds+=`email="${req.body.email}"`;
+		}
+		if(req.body.password!=''){
+			if(adds!=''){
+				adds+=', ';
+			}
+			adds+=`password="${req.body.password}"`;
+		}
+		if(req.body.profilePicturePath!=''){
+			if(adds!=''){
+				adds+=', ';
+			}
+			adds+=`profilePicturePath="${req.body.profilePicturePath}"`;
+		}
+		var sql = `update users set ${adds} where userID = ${id}`;
+		console.log(sql);
+		return db.sequelize.query(sql)
+			.then((user) => res.send(user))
+    		.catch((err) => {
+      	console.log('***There was an error updating user')
+      return res.status(400).send(err)
+    });
 	},
 	deleteUser: function(req, res){
 		console.log("Delete user "+ req.params.userid);
