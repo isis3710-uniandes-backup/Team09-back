@@ -46,16 +46,20 @@ app.use(function(req,res,next){
 
 app.use(bodyParser.json());
 
-var messagesList=[];
+//var messagesList=[];
 
 //sockets.io declarations
 function onConnection(socket){
 	
-	socket.emit('messages',messagesList);
+	socket.emit('messages','hola');
 	socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+	socket.on('join',function(data){
+		socket.join(data);
+	});
 	socket.on('new-message', function(data) {
-		messagesList.push(data);
-		socket.broadcast.emit('messages', messagesList);
+		socket.join(data.id);
+		socket.to(data.id).emit('messages', data);
+		socket.leave();
 	});
 	//socket.on('messages', (data) => socket.broadcast.emit('message', data));
 }
