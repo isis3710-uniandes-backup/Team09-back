@@ -131,6 +131,7 @@ app.get("/api/actions/", actions.getActions);
 app.get("/api/actions/:svgPath", actions.getAction);
 app.post("/api/actions/create", actions.postAction);
 app.delete("/api/actions/delete/:actionid", actions.deleteAction);
+app.put("/api/actions/draw/:canvasId", actions.putAction);
 
 
 app.post("/api/groups/admins", groups.postAdmin);
