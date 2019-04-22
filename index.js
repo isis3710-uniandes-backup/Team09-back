@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
@@ -19,8 +20,6 @@ const comments = require("./src/routes/comments");
 const actions = require("./src/routes/actions");
 
 //const usersInGroups = require("./src/routes/usersInGroups");
-const bodyParser = require('body-parser');
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -44,7 +43,12 @@ app.use(function(req,res,next){
 	  }
 });
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
+var jsonParser       = bodyParser.json({limit:'50mb', type:'application/*+json'});
+var urlencodedParser = bodyParser.urlencoded({ extended:true,type:'application/x-www-form-urlencoding' })
+//modified in body-parser/lib/types/json
+app.use(jsonParser);
+app.use(urlencodedParser);
 
 //var messagesList=[];
 
