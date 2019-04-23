@@ -35,18 +35,10 @@ Por consiguiente, NO se está persistiendo con JSON si no diréctamente en un ar
 
 #### e) Nuestro servidor estará corriendo en localhost sobre el puerto 3001. Las colecciones de Postman automáticamente tienen esto configurado, pero se pueden probar todas las conexiones manualmente con las direcciones del API descritas en nuestra documentación.
 
-## 4) Pruebas (no funcionales en release 3 por los cambios)
-
-### En las pruebas, hemos incluído dos tipos de pruebas: Las automatizadas y las no automatizadas.
-
-### Las pruebas "DELETE" NUNCA son automatizadas por lo que ella conlleva más procesamiento. Recomendamos hacerlas sólo 1 vez y luego restaurar la base de datos para mantener la integridad de esta.
-
-### a) Todas las pruebas en su versión NO automatizada se encuentran en la colección "Entrega2Web". 
-
-### b) Las pruebas "GET", "POST" y "PUT" son completamente automatizadas en su colección correspondiente.
-
-Dejamos a discreción de la persona probando usar las pruebas automáticas o no, por eso incluímos ambos tipos de pruebas en nuestras colecciones.
-
+## IMPORTANTE:
+## ES NECESARIO MODIFICAR EL BODY-PARSER DEFAULT DE NODE JS. Esto se debe a un límite arbitrario de Express que no se está modificando correctamente en la versión actual de Express. Para esto:
+### > Dirigirse al directorio /Team09-back/node_modules/body-parser/lib/types/ 
+### > Modificar el archivo json.js en la linea 54. Cambiar el limite de 100kb a 5000kb o mayor. Recomendamos 20000kb.
 
 
 
@@ -87,14 +79,7 @@ As a consequence, we are NOT persisting our information with JSON files, instead
 
 #### e) Our server will be running on localhost on the port 3001. The collections within Postman have this preconfigured, but you can test all addresses with the API described in our documentation.
 
-## 4) Tests (non functional as of release 3)
-
-### Within the tests, we have included two types: Automatic and not automatic.
-
-### The DELETE tests are NEVER automatic, as they require more processing power. We recommend doing these only once, and then re-downloading the database to maintain it's integrity.
-
-### a) All tests in their non automatic form are located in the collection "Entrega2Web".
-
-### b) The tests for "GET", "POST" and "PUT" are completely automatic, and are located in their respetive collections.
-
-We choose to leave the person who is testing the API to decide whether to use the automatic versions or not, hence, both are included in the repository.
+## IMPORTANT:
+## IT'S NECESSARY TO MODIFY THE BODY-PARSER DEFAULT DEPENDENCY FROM NODE JS. This is due to an arbitrary limit in express which is not changing appropiately automatically in this version. To do this:
+### > Go to the directory /Team09-back/node_modules/body-parser/lib/types/ 
+### > Modify the json.js file on line 54. Change the limit from 100kb to 5000kb or greater. We recommend 20000kb. 
