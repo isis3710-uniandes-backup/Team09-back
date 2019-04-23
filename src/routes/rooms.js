@@ -77,5 +77,15 @@ module.exports={
         res.status(400).send(err)
     // We don't need spread here, since only the results will be returned for select queries
     });
+  },
+  getChats: function(req,res){
+
+      return db.sequelize.query("select * from chats where roomId="+req.params.roomid, { type: db.sequelize.QueryTypes.SELECT})
+        .then((chats) => res.send(chats))
+        .catch((err) => {
+          console.log('There was an error querying the chats', JSON.stringify(err))
+        res.status(400).send(err)
+    // We don't need spread here, since only the results will be returned for select queries
+    });
   }
 }
