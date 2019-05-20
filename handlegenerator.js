@@ -11,11 +11,7 @@ class HandlerGenerator {
     // Extrae el usuario y la contraseña especificados en el cuerpo de la solicitud
     let username = req.params.username;
     let password = req.body.password;
-    
-    // Este usuario y contraseña, en un ambiente real, deben ser traidos de la BD
-    //var obj=users.getUserByName(req,res);
-    let mockedUsername = 'admin';
-    let mockedPassword = 'password';
+
 
     var obj;
     db.Users.findAll({attributes:['userID','username','email','password','profilePicturePath'],where: {username: username}})
