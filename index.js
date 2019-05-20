@@ -78,12 +78,12 @@ io.on('connection', onConnection);
 //Declatarions that link the resources to the main app express manager.
 //User routes
 
-app.get('/h', middleware.checkToken, HandlerGenerator.index);
+//app.get('/h', middleware.checkToken, HandlerGenerator.index);
 app.post( '/api/login/:username', HandlerGenerator.login);
 
-app.get("/api/users/", users.getUsers);
-app.get("/api/users/:userid", users.getUser);
-app.get("/api/users/name/:username", users.getUserByName);
+app.get("/api/users/",middleware.checkToken, users.getUsers);
+app.get("/api/users/:userid",middleware.checkToken, users.getUser);
+app.get("/api/users/name/:username",middleware.checkToken, users.getUserByName);
 app.post("/api/users/create", users.postUser);
 app.put("/api/users/edit/:userid", middleware.checkToken,users.putUser);
 app.delete("/api/users/delete/:userid", middleware.checkToken,users.deleteUser);

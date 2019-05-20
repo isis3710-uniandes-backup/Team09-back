@@ -48,7 +48,7 @@ class HandlerGenerator {
             } else {
               
               // El error 403 corresponde a Forbidden (Prohibido) de acuerdo al estándar HTTP
-              res.sendStatus(403).json( {
+              res.send(403).json( {
                 success: false,
                 message: 'Incorrect username or password'
               } );
@@ -58,7 +58,7 @@ class HandlerGenerator {
           } else {
 
             // El error 400 corresponde a Bad Request de acuerdo al estándar HTTP
-            res.sendStatus( 400 ).json( {
+            res.send( 400 ).json( {
               success: false,
               message: 'Authentication failed! Please check the request'
             } );
@@ -67,6 +67,7 @@ class HandlerGenerator {
               }
               ).catch((err) => {
                 console.log('There was an error querying the user', JSON.stringify(err))
+                res.status(400).send(err);
             });
     }
 
